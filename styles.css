@@ -1,0 +1,247 @@
+body {
+    margin: 0;
+    padding: 0;
+    font-family: Arial, sans-serif;
+}
+
+
+
+.screen {
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.screen1 {
+    background-image: url('https://avatars.dzeninfra.ru/get-zen_doc/3940836/pub_5f6ebcd3df292d1109fdb93f_5f6ebded6e33974a01c59c17/scale_1200');
+    background-size: cover;
+    background-position: center;
+}
+
+.screen2 {
+    background-color: #D1F9D2;
+}
+
+.screen3 {
+    background-color: #FFFFFF;
+}
+
+.screen4 {
+    background-color: #D1F9D2;
+}
+
+.screen5 {
+    background-color: #FFFFFF;
+}
+
+.screen6 {
+    background-color: #D1F9D2;
+}
+
+.screen7 {
+    background-image: url('https://i2.wp.com/www.downshiftology.com/wp-content/uploads/2022/02/Matcha-Latte-6.jpg');
+    background-size: cover;
+    background-position: center;
+}
+
+h1 {
+    font-size: 2em;
+    color: #000000;
+}
+
+/* Додавання медіа-запитів для адаптивності */
+
+@media screen and (max-width: 768px) {
+    .screen {
+        font-size: 1.5em;
+    }
+}
+
+
+
+.container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 20px;
+    background-color: #D1F9D2;
+    border-radius: 20px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.content {
+    text-align: center;
+}
+
+h1, p, button {
+    margin: 10px;
+}
+
+/*кнопка та що знизу + колір змінює*/
+
+button {
+    padding: 10px 20px;
+    background-color: #39FFAC;
+    color: #000000;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.btn:hover {
+    background-color: #11e40d;
+}
+
+.container {
+    text-align: center;
+}
+
+.container3, .container4, .container5 {
+    
+    justify-content: center; /* Вирівнює текст по центру */
+    padding: 50px; /* Встановлює відступи з обох сторін */
+}
+
+p,h2 {
+    text-align: center; /* Вирівнює текст по центру в контейнері */
+    margin: 40; /* Видаляє зовнішні відступи тексту (за бажанням) */
+}
+
+
+
+ ul {
+  display: flex;
+  list-style: none;
+  padding: 0;
+  justify-content: flex-end; /* Вирівняти до правого краю */
+}
+
+li {
+  margin-left: 20px; /* Додайте відступ між словами за бажанням */
+}
+
+a {
+  text-decoration: none;
+  color: #000; /* Колір тексту */
+}
+    
+
+.newsletter,
+.newsletter h2,
+.newsletter p {
+ margin: 0;
+ padding: 0;
+}
+
+.newsletter {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    
+    padding: 2rem;
+    border-radius: 10px;
+   }
+
+.newsletter h2 {
+    font-size: 2rem;
+    margin-bottom: 1rem;
+   }
+   
+   .newsletter p {
+    font-size: 1.2rem;
+    margin-bottom: 1.5rem;
+   }
+
+   .container {
+    width: 80%;
+    margin: auto;
+    text-align: center;
+    font-family: Arial, sans-serif;
+}
+h1 {
+    color: #333;
+}
+p {
+    color: #666;
+}
+
+
+
+h3 {
+    margin: 10px 0;
+}
+
+/*оті штуки круглі*/
+
+
+.container6 {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    font-family: Arial, sans-serif;
+    justify-content: space-around;
+    align-items: center;
+    gap: 20px;
+    padding: 20px;
+}
+
+.photo-container {
+    position: relative;
+    width: 150px;
+    height: 150px;
+    overflow: hidden;
+    border-radius: 50%;
+    margin-inline-end: 100px;
+}
+/*display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 20px;
+    background-color: #D1F9D2;
+    border-radius: 20px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);*/
+
+.photo-container:hover::before {
+    content: "";
+    
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: #39FFAC;
+    opacity: 0.7;
+    border-radius: 50%;
+    z-index: -1;
+}
+
+.photo-container img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 50%;
+}
+
+.text-container {
+    text-align: center;
+    max-width: 150px;
+    border-radius: 10px;
+    position: relative;
+    z-index: 1; /* Для розташування тексту наверху прямокутника */
+}
+
+.text-container:hover::before {
+    content: "";
+    display: block;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: #39FFAC;
+    opacity: 0.7;
+    z-index: -1;
+}
+
+
+
+
