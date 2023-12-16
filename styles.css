@@ -2,6 +2,7 @@ body {
     margin: 0;
     padding: 0;
     font-family: Arial, sans-serif;
+    
 }
 
 
@@ -82,24 +83,35 @@ header {
 
 
 img {
-    max-width: 100%; /* Забезпечтить адаптивність для всіх зображень */
-    height: auto;
+    width: 100%; /* ширина фотографії (можна налаштувати на власний розсуд) */
+    height: auto; /* забезпечення пропорцій при зміні розміру ширини */
+    display: block; /* для центрування по горизонталі */
+    margin: 0 auto; /* автоматичний відступ зверху і знизу, та автоматичне центрування по горизонталі */
   }
 
-.video-container {
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    overflow: hidden;
-    z-index: -1;
-  }
   
   video {
-    width: 100%;
-    height: 100%;
-  }
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    min-width: 100%;
+    min-height: 100%;
+    width: auto;
+    height: auto;
+    transform: translate(-50%, -50%);
+    z-index: -1; /* Розміщення відео за всіма іншими елементами */
+}
+
+/* Зазначте інші стилі для вашого контенту */
+.content3 {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 1; /* Розміщення контенту над відео */
+    
+    text-align: center;
+}
   
   iframe {
   width: 100%;
@@ -247,7 +259,6 @@ h1 {
     flex-direction: column;
     align-items: center;
     padding: 20px;
-    background-color: #D1F9D2;
     border-radius: 20px;
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
 }
@@ -279,7 +290,7 @@ button {
     text-align: center;
 }
 
-.container3, .container4, .container5 {
+.container2, .container3, .container4, .container5 {
     
     justify-content: center; /* Вирівнює текст по центру */
     padding: 50px; /* Встановлює відступи з обох сторін */
@@ -375,13 +386,6 @@ h3 {
     border-radius: 50%;
     margin-inline-end: 100px;
 }
-/*display: flex;
-    flex-direction: column;
-    align-items: center;
-    padding: 20px;
-    background-color: #D1F9D2;
-    border-radius: 20px;
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);*/
 
 .photo-container:hover::before {
     content: "";
@@ -408,7 +412,7 @@ h3 {
     max-width: 150px;
     border-radius: 10px;
     position: relative;
-    z-index: 1; /* Для розташування тексту наверху прямокутника */
+    z-index: 1; 
 }
 
 .text-container:hover::before {
@@ -423,7 +427,4 @@ h3 {
     opacity: 0.7;
     z-index: -1;
 }
-
-
-
 
